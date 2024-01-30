@@ -79,37 +79,51 @@ Social media interactions with EABL's official customer service handles.
 4. Checking for outliers
 
    ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/a3c7c0f9-90cf-4359-9300-15c4b24d84df)
+
+
 5. Removing unnecessary text
 
 # EXPLORATORY DATA ANALYSIS
 1. Checking length of text
 2. Separating datetime features
 3. Getting the total engagement
+
    ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/b8df113c-43d6-4b72-9a89-ecd15018e2e5)
+
+
 4. Distribution of tweets based on the day of week.
+
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/f3cb54b5-65b6-4844-88d7-fb10435ee0a4)
 
+   
    <b>Fridays</b> is the peak of people contribution of the EABL tweeter(X) platform. People tend to tweet more about alcohol on Fridays due to the end-of-week celebration, social gatherings, popular hashtags like #FridayFeeling, the association of Fridays with relaxation, and cultural norms that encourage discussions about alcohol-related activities on certain days.  
 
 <b>Mondays</b>, has the least tweets. This is partially due to people, generally focused on the start of the workweek, responsibilities, and may have a more serious or work-oriented mindset. There's often less emphasis on celebratory or leisure activities like alcohol consumption. Additionally, Monday is often associated with recovering from the weekend, setting professional goals, and a lower inclination for socializing compared to the more relaxed atmosphere on Fridays
 ## Distribution of tweets by hour of the day
+
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/30f0c453-62ef-491e-8411-56ce8ace7396)
+
 1. End of Workday: Many users tweet around 5 PM as it marks the end of the workday, providing a convenient time for them to engage in social media activities.
 2. Commute Time:People tweet during their commute home, making 5 PM a popular time for sharing thoughts and updates.
 3. Break Time:Individuals take breaks in the late afternoon to unwind, with 5 PM becoming a common time for social media engagement.
 4. Global Connectivity:5 PM aligns with peak online activity, connecting users from different time zones and contributing to increased Twitter usage.
 5. Social Interaction:Twitter is used for social interactions, and 5 PM serves as a time for connecting with friends and colleagues, sharing daily updates.
-6. ## Clustering the users based on sentiment
-7. The folowing are the clusters represented
-1. Cluster 0: Users in this cluster have  a lower average sentiment.(average :3.843131)
-2. Cluster 1: Users in this cluster have  a moderate average sentiment.(average: 3.684777 )
-3. Cluster 2: Users in this cluster have a higher average sentiment.(average: 922274)
- ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/a3f4bea0-249c-4fe6-970c-7f653c0c7028)
+ ## Clustering the users based on sentiment
+ The folowing are the clusters represented
+ Cluster 0: Users in this cluster have  a lower average sentiment.(average :3.843131)
+ Cluster 1: Users in this cluster have  a moderate average sentiment.(average: 3.684777 )
+ Cluster 2: Users in this cluster have a higher average sentiment.(average: 922274)
+ 
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/a3f4bea0-249c-4fe6-970c-7f653c0c7028)
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/f7f3ae1c-135d-4689-b3bb-89d070c38aa4)
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/0da296d3-5a75-4712-a8ad-77c65ad55856)
+ 
  Cluster 1: Users have high number of positive sentiments.
+
 These customer may receive messages emphasizing brand loyalty, while negative segments may receive messages addressing concerns or offering solutions.
+
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/07eba0db-f504-4f19-8387-7df4cfb90900)
+
 Develop marketing messages and promotions tailored to each segment's sentiment profile. Positive segments may receive messages emphasizing brand loyalty, while negative segments may receive messages addressing concerns or offering solutions.
 ## Correlation matrix of the engagement means
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/1f343446-ad35-4d06-84ec-3265855446b5)
