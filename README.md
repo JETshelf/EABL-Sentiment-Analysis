@@ -1,5 +1,3 @@
-![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/916dbc81-cb2e-431b-9d7a-3dfce0334fbd)## Data-Driven Brand Mastery: EABL's Social Analytics
-
 ## Business Overview
 ### Introduction:
 East African Breweries Limited (EABL) stands as a preeminent player in the Fast-Moving Consumer Goods (FMCG) sector, particularly within the competitive beverage industry. Operating across East Africa, EABL has established a robust market presence in countries such as Kenya, Uganda, Tanzania, Rwanda, and South Sudan. The company boasts a diverse and iconic portfolio of brands, including Tusker Lager, Pilsner Lager, WhiteCap Lager, Johnnie Walker, Smirnoff, Gilbey's Gin, Richot Brandy, Bond 7 Whiskey, and Baileys Irish Cream. (EABL, 2023)
@@ -203,6 +201,7 @@ Classification Report:
     accuracy                           0.78     22248
    macro avg       0.79      0.78      0.78     22248
 weighted avg       0.79      0.78      0.78     22248
+
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/45146828-a073-4756-bfc3-4e45154e6634)
 
 Above is the confusion matrix for the same.
@@ -248,6 +247,8 @@ To continue refining the models to improve accuracy and explore  more advanced n
 ##### 3.  Real-time Monitoring:
 
 Implement a real-time monitoring system to track sentiments and reactions promptly. This will allow EABL to respond swiftly to emerging trends and issues.
+
+
 
 
 
