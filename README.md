@@ -1,4 +1,4 @@
-## Data-Driven Brand Mastery: EABL's Social Analytics
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/916dbc81-cb2e-431b-9d7a-3dfce0334fbd)## Data-Driven Brand Mastery: EABL's Social Analytics
 
 ## Business Overview
 ### Introduction:
@@ -127,3 +127,131 @@ These customer may receive messages emphasizing brand loyalty, while negative se
 Develop marketing messages and promotions tailored to each segment's sentiment profile. Positive segments may receive messages emphasizing brand loyalty, while negative segments may receive messages addressing concerns or offering solutions.
 ## Correlation matrix of the engagement means
 ![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/1f343446-ad35-4d06-84ec-3265855446b5)
+
+## Data preprocessing
+Before conducting sentiment analysis, it is imperative to follow these essential steps: eliminating stop words, removing tags, URL links, and other extraneous words, tokenizing the text, and lemmatizing words.
+
+##### Checking for tweet Length Consistency
+We notice that some tweets consist of less than five words therefore won't be instrumental in constructing our predictive model.
+We note tht there are 64260 tweets with characters greater than 5 and  1523 tweets with characters less than 5 characters.
+### Checking for Duplicates in the dataset
+It is not evident if there are duplicated tweets. We chose to retain the duplicates.
+For cleaning our text we are gling to use the NeatText Library. NeatText is a simple NLP package for cleaning textual data and text preprocessing. It offers a variety of features for cleaning unstructured text data, reducing noise (such as special characters and stopwords), and extracting specific information from the text. It can be used via an object-oriented approach or a functional/method-oriented approach, providing flexibility in its usage. The package includes classes such as TextCleaner, TextExtractor, and TextMetrics for different text processing tasks. 
+We also removed specisl characters, whitespaces and emojis.
+
+###  Contractions
+
+Contractions in a tweet refer to shortened forms of words or phrases that are created by combining two words and replacing one or more letters with an apostrophe. Contractions are commonly used in informal writing, including tweets, to save space and make the text more conversational.
+### Language Processing (Clean Text)
+This involves Tokenization, Stemming / Lemmatization, Parts of Speech Tagging and Calculating Sentiment Based on Polarity & Subjectivity.
+### Lemmatization
+Lemmatization is a linguistic processing technique that involves reducing words to their base or root form, known as the lemma.The purpose of lemmatization is to standardize and simplify words, considering different inflections or variations of a word as a single base form. This aids in tasks such as text analysis, natural language processing, and information retrieval by treating related forms of a word as identical
+### Calculatition of Sentiments Based on Polarity & Subjectivity
+TextBlob is a Python library used for processing textual data, including sentiment analysis. It uses natural language processing (NLP) and the Natural Language Toolkit (NLTK) to achieve this task. When a sentence is passed into TextBlob, it returns two outputs: polarity and subjectivity. The polarity score is a float within the range [-1, 1], where -1 indicates a negative sentiment and 1 indicates a positive sentiment. The subjectivity score is a float within the range, where 0 is very objective and 1 is very subjective. Getting the count of varying sentiments. (positive, negative and neutral)
+Neutral     37687
+Positive    20049
+Negative     6524
+Name: sentiment, dtype: int64
+We note that we have some missing values in our dataset. We chose to drop them since we won't be losing a good chunk of data.
+
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/f36c9249-5e3b-48b2-ad3b-76274a64af08)
+
+The histogram shows that the most common word count is between 20 and 50. The distribution is skewed to the left, meaning that there are more tweets with lower word counts than higher word counts.
+
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/d6a2b5bc-bb5e-4141-8fc4-79c6b6aa623d)
+
+### Sentiment Analysis
+Distribution of Sentiments
+
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/be284ffa-90ed-4927-98df-6550d601bcd4)
+
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/5ede79d8-b798-46fe-9884-6a8614b7ca92)
+ This is a tree map of the most common positive words.
+### Negative Sentiment Analysis
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/45038262-3585-49de-8e2e-0c150453f63d)
+
+This is a tree map of the most common negative words.
+
+### Neutral Sentiment Analysis
+
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/a42043b8-8ae4-4d76-972d-0e908a665df3)
+
+This is a tree map of the most common neutral words.
+### Dealing with sample imbalance
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/915905cd-b61d-42e9-9505-1c95549ee9a7)
+
+Initial distribution of sentiment analysis.
+Below is the balanced sentiments after using RandomOverSamepler
+
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/a8566171-2556-4a29-92b6-60366fbf5f79)
+
+# Modeling
+Data is now balanced.
+### Data Preparation
+### Spliting Data into Train and Test
+
+## Naive-Bayes Model
+Accuracy: 0.7813286587558432
+
+Classification Report:
+               precision    recall  f1-score   support
+
+    Negative       0.72      0.85      0.78      7358
+     Neutral       0.85      0.67      0.75      7491
+    Positive       0.80      0.82      0.81      7399
+
+    accuracy                           0.78     22248
+   macro avg       0.79      0.78      0.78     22248
+weighted avg       0.79      0.78      0.78     22248
+![image](https://github.com/JETshelf/EABL-Sentiment-Analysis/assets/133136216/45146828-a073-4756-bfc3-4e45154e6634)
+
+Above is the confusion matrix for the same.
+
+## Recommendations:
+##### 1.  Brand Perception and Engagement:
+EABL should capitalize on the positive sentiments expressed by customers, especially around popular brands like Tusker and Gilbey's by developing effective marketing strategies to amplify and maintain the positive image.
+The company should also consider targeted campaigns/Events to address issues raised in negative sentiment in the different brands.
+
+##### 2. Marketing Campaign Effectiveness:
+
+EABL should continue monitoring social media reactions to marketing campaigns/Events to gauge effectiveness by using insights to refine future campaigns and promotions and ensuring they resonate positively with the target audience.
+They should also encourage user-generated content and interaction to increase positive experiences.
+
+##### 3. Continuous Social Media Monitoring & Regular Surveys:
+
+The company should implement a real-time social media monitoring system to stay updated on evolving social media sentiments and Conduct periodic surveys to gather structured feedback from customers then use the insights to identify/address areas for innovation and enhancement.
+
+### Conclusion:
+
+In conclusion, the sentiment analysis revealed valuable insights into public perception of EABL brands & their sponsored campaigns/Events on social media. Positive sentiments around brands indicate strong brand loyalty, while negative sentiments point to specific areas that require attention. EABL should leverage positive sentiments, address concerns, and continue monitoring social media for ongoing improvement.
+
+### Limitations:
+
+##### 1. Data Source Limitations:
+
+The sentiment analysis relies on data primarily from Twitter and Google News. This didn't fully capture the diverse opinions of all customers in different social media platforms.
+
+##### 2. Bias in Social Media Data:
+
+Social media data may have inherent biases and may not represent the views of the entire customer base. The analysis might be skewed towards more active users on these platforms.
+
+### Next Steps:
+
+##### 1. Diversify Data Sources:
+
+Expand data collection to include other social media platforms and online forums such as Facebook, Instagram, this will ensure a more comprehensive understanding of public sentiment.
+
+##### 2.  Continuous Model Improvement:
+
+To continue refining the models to improve accuracy and explore  more advanced natural language processing techniques.
+
+##### 3.  Real-time Monitoring:
+
+Implement a real-time monitoring system to track sentiments and reactions promptly. This will allow EABL to respond swiftly to emerging trends and issues.
+
+
+
+
+
+
+
