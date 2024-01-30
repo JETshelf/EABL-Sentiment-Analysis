@@ -248,9 +248,9 @@ To continue refining the models to improve accuracy and explore  more advanced n
 
 Implement a real-time monitoring system to track sentiments and reactions promptly. This will allow EABL to respond swiftly to emerging trends and issues.
 
-
-
-
+#### Deployment
+Here is the link to the deployment.
+https://header2jpg-v2tzvfuyr7yxo2wv8tpto7.streamlit.app/
 
 
 
